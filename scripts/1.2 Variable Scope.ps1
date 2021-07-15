@@ -7,6 +7,6 @@
 [int]$Global:var1 = 15
 [int]$Global:var2 = 20
 
-# after running this script try writing Write-Host $var1 or Write-Host v$ar2
-# you should see that these are accessable by powershell now
+# after running this script try writing Write-Host $var1 or Write-Host $var2
+# you should see that these are accessable by powershell terminal now
 # you can also call them using $Global:
