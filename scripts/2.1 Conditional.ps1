@@ -71,8 +71,55 @@ elseif ($first -lt $second) {
  #      results opposite of -like
  #>
 
+if ("FOOBAR" -like "FOO*"){
+    Write-Host "Match"
+}
+if("FOOBAR" -like "*OO*"){
+    Write-Host "Match Again!"
+}
 
  <#
   # -match
   #     matches a regular expression pattern
+  # -notmatch
+  #     does opposite of match
   #>
+
+if("A" -match "[a-zA-Z]"){
+    Write-Host "Regex Matches!"
+}
+
+<#
+ # -contains
+ #      Returns true when given value is matched in a arrays(we will talk about these later) etc
+ # -notconatins
+ #      Opposite of -contains,results in True when given value is not found in collection
+ #>
+
+$list = @(1,15,123,151,231,14)
+
+if($list -contains 15){
+    Write-Host "List contains our number!"
+}
+
+<#
+ # -in
+ #      Results in true when collection contains given value
+ #  -notin
+ #      Results in false when collection contains given value
+ #>
+
+ if(231 -in $list){
+     Write-Host "List contains 231"
+ }
+
+<#
+ # -is
+ #      Compares a variable type and results in True when type is mathced
+ #  -isnot
+ #      opposite if is
+ #>
+
+ if($first -is [int]){
+     Write-Host "First named var is a int"
+ }

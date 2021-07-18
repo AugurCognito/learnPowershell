@@ -14,7 +14,6 @@ This is a repo I made while learning Powershell Scripting.This repo contains scr
 
 ## How to Run Powershell Scripts?
 In powershell enter powershell script file path...and thats it.
-For example
 You may face an error saying-
  `<script> cannot be loaded because running scripts is disabled on this system.`
  In that case simply run `Set-ExecutionPolicy RemoteSigned` command in powershell shell with elevated permissions.
